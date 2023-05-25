@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
         allowed.push_back("bart");
         allowed.push_back("lisa");
         allowed.push_back("maggie");
-        ValuesConstraint<string> allowedVals(allowed);
+        const ValuesConstraint<string> allowedVals(allowed);
 
         ValueArg<string> nameArg("n", "name", "Name to print", true, "homer",
                                  &allowedVals);
@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
         iallowed.push_back(1);
         iallowed.push_back(2);
         iallowed.push_back(3);
-        ValuesConstraint<int> iallowedVals(iallowed);
+        const ValuesConstraint<int> iallowedVals(iallowed);
 
         UnlabeledValueArg<int> intArg("times", "Number of times to print", true,
                                       1, &iallowedVals, false);

@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
         allowed.push_back("bart");
         allowed.push_back("lisa");
         allowed.push_back("maggie");
-        ValuesConstraint<string> vallowed(allowed);
+        const ValuesConstraint<string> vallowed(allowed);
 
         MultiArg<string> nameArg("n", "name",
                                  "Name to print. This is a long, nonsensical "
@@ -38,7 +38,7 @@ int main(int argc, char **argv) {
         iallowed.push_back(1);
         iallowed.push_back(2);
         iallowed.push_back(3);
-        ValuesConstraint<int> iiallowed(iallowed);
+        const ValuesConstraint<int> iiallowed(iallowed);
 
         UnlabeledMultiArg<int> intArg("times", "Number of times to print",
                                       false, &iiallowed);
