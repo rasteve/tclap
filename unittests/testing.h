@@ -23,6 +23,9 @@
 #ifndef __TESTING_H__
 #define __TESTING_H__
 
+#include <iostream>
+#include <sstream>
+
 #define ERROR(t, w) \
     {               \
         t << w;     \
