@@ -64,15 +64,6 @@ cpack_add_component(doc
 	DESCRIPTION "Documentation files for TCLAP"
 )
 
-install(DIRECTORY ${PROJECT_BINARY_DIR}/docs/html
-  DESTINATION ${DOC_INSTALL_DIR}
-  COMPONENT doc
-)
-install(FILES ${PROJECT_BINARY_DIR}/docs/index.html ${PROJECT_BINARY_DIR}/docs/manual.html
-  ${PROJECT_BINARY_DIR}/docs/style.css DESTINATION ${DOC_INSTALL_DIR}
-  COMPONENT doc
-)
-
 option(BUILD_EXAMPLES "Build examples" ON)
 option(BUILD_UNITTESTS "Build unit tests" ON)
 option(BUILD_DOC "Build documentation" ON)
